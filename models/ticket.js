@@ -15,6 +15,9 @@ module.exports = (sequelize, DataTypes) => {
     Ticket.belongsTo(models.Mechanic); 
 
     Ticket.belongsTo(models.insuranceAgent);
+    Ticket.belongsTo(models.User);
   };
+
+  
   return Ticket;
 };
