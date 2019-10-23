@@ -20,3 +20,13 @@
 .App-link {
   color: #09d3ac;
 }
+
+
+
+#loginBox {
+  border: 5px red solid;
+    width: 35rem;
+    height: 20rem;
+    right: 50px;
+    position: absolute;
+}
