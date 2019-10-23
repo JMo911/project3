@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 var db = require("./models");
+var routes = require("./routes");
 
 // app.use(express.bodyParser())
 app.use(express.json());
@@ -13,13 +14,15 @@ db.sequelize.sync().then(function () {
   });
 });
 
-app.post('/api/users', (req, res) => {
-  // res.send('Hello World!');
-  // const user = req.body;
-  // console.log(req.body);
-  db.User.create(req.body).then(function (dbUser) {
-    res.json(dbUser);
-  });
-});
+app.use(routes);
+
+// app.post('/api/users', (req, res) => {
+//   // res.send('Hello World!');
+//   // const user = req.body;
+//   // console.log(req.body);
+//   db.User.create(req.body).then(function (dbUser) {
+//     res.json(dbUser);
+//   });
+// });
 
 // app.listen(port, () => console.log(`Example app listening on port ${port}!`));
