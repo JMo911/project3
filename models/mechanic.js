@@ -6,6 +6,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Mechanic.associate = function(models) {
     // associations can be defined here
+    Mechanic.hasMany(models.Ticket);
   };
   return Mechanic;
 };
