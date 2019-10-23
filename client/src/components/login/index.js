@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 import {Accordion, Card, Container, Row, Col, Button} from "react-bootstrap";
-// import ReactDOM from 'react-dom';
-import posed from 'react-pose';
-// import data from '../login/data/data';
 import './styles.css';
 
 
