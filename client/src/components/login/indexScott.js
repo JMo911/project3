@@ -118,3 +118,14 @@ class LoginPage extends Component {
     }
 }
 export default LoginPage;
+
+
+
+
+
+
+
+
+
+const rootElement = document.getElementById('root');
+// ReactDOM.render(<Example />, rootElement);

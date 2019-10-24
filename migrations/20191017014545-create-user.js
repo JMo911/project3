@@ -8,11 +8,8 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      lastName: {
+      name: {
         type: Sequelize.STRING
-      },
-      caseNumber: {
-        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,

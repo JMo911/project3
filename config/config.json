@@ -1,11 +1,11 @@
 {
   "development": {
-    "username": "root",
-    "password": "root",
-    "database": "project3",
+    "username": "homestead",
+    "password": "secret",
+    "database": "database_development",
     "host": "127.0.0.1",
     "dialect": "mysql",
-    "port": 3000
+    "port": 33060
   },
   "test": {
     "username": "root",

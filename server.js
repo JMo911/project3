@@ -1,25 +1,22 @@
-const express = require('express')
-const app = express()
-var db = require("./models");
+const express = require("express");
+const path = require("path");
+const PORT = process.env.PORT || 3001;
+const app = express();
+const routes = require("./routes");
 
-// app.use(express.bodyParser())
-app.use(express.json());
+app.use(routes);
+ 
+// Serve up static assets (usually on heroku)
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 
-var PORT = process.env.PORT || 8080;
-
-db.sequelize.sync().then(function() {
-    app.listen(PORT, function() {
-      console.log("App listening on PORT " + PORT);
-    });
-  });
-
-app.post('/api/users', (req, res) => {
-    // res.send('Hello World!');
-    // const user = req.body;
-    // console.log(req.body);
-    db.User.create(req.body).then(function(dbUser) {
-        res.json(dbUser);
-      });
+// Send every request to the React app
+// Define any API routes before this runs
+app.get("*", function(req, res) {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
-// app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(PORT, function() {
+  console.log(`🌎 ==> API server now on port ${PORT}!`);
+});
