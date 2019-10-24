@@ -13,21 +13,21 @@ import './styles.css';
 
 
 
-class InsurerLogin extends Component {
+class MechanicLogin extends Component {
     render() {
         return (
-            <div class="user-login-area" id="insurance-login-area">
+            <div class="user-login-area" id="customer-login-area">
             <Card.Body>
                 <Form>
                     <Row>
                         <Col>
-                            <Form.Control placeholder="Insurance Company" />
+                            <Form.Control placeholder="Last Name" />
                         </Col>
                         <Col>
-                            <Form.Control placeholder="Insurance Employee ID #" />
+                            <Form.Control placeholder="Ticket #" />
                         </Col>
                         <Col>
-                            <Button id="insurer-login-button">Insurance Agent Login</Button>
+                            <Button id="mechanic-login-button">Customer Login</Button>
                         </Col>
                     </Row>
                 </Form>
@@ -36,4 +36,4 @@ class InsurerLogin extends Component {
         )
     }
 }
-export default InsurerLogin;
+export default MechanicLogin;

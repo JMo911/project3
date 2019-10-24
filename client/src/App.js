@@ -1,27 +1,26 @@
 import React, { Component } from "react";
 // import logo from './logo.svg';
 import './App.css';
-import {BrowserRouter, Route, Link} from "react-router-dom";
-import {Container, Row, Col, Button} from "react-bootstrap";
+// import {BrowserRouter, Route, Link} from "react-router-dom";
+import {Container, Row, Col} from "react-bootstrap";
 import LoginPage from "./components/login/index";
+import LoginBox from "./components/login/loginbox";
 
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
         <Container>
           <Row>
-            <Col md={9}>
+            <Col md={8}>
               <div id="mainArea">
-                <Route exact path="/" component={LoginPage} />
+                <LoginPage />
               </div>
             </Col>
             <Col md={3}>
-              {/* <LoginPage /> */}
+              <LoginBox />
             </Col>
           </Row>
         </Container>
-      </BrowserRouter>
     );
   }
 }
